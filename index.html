@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Daily Quran Verse</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Verse Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
-        <h1>Quran Verse of the Day</h1>
-        <p id="verse-text">Loading verse...</p>
+        <h1>Quran Verse</h1>
+        
+        <p id="arabic-text" class="arabic">Loading...</p>
+        
+        <p id="translation-text">Fetching translation...</p>
+        
         <h3 id="verse-info"></h3>
-        <button onclick="getVerse()">Get New Verse</button>
+
+        <div class="button-group">
+            <button onclick="getVerse()" class="btn-next">New Verse</button>
+            <button onclick="copyToClipboard()" class="btn-share">Copy to Share</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
